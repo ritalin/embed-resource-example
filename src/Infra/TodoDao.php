@@ -14,8 +14,8 @@ interface TodoDao
     /**
      * @Select
      *
-     * @param DateTime from
-     * @param DateTime to
+     * @param \DateTime $from
+     * @param \DateTime $to
      *
      * @return Todo[]
      */
