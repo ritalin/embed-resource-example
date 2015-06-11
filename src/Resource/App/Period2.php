@@ -2,31 +2,34 @@
 
 namespace EmbedApp\Sample\Resource\App;
 
-use BEAR\Resource\ResourceObject;
 use BEAR\Resource\FactoryInterface;
-
+use BEAR\Resource\ResourceObject;
 use Embed\Sample\ItemResourceGeneratorBuilder;
 
-class Period2 extends ResourceObject {
+class Period2 extends ResourceObject
+{
     /**
      * @var FactoryInterface
      */
     private $factory;
-    
-    public function __construct(FactoryInterface $factory) {
+
+    public function __construct(FactoryInterface $factory)
+    {
         $this->factory = $factory;
     }
-    
-    public function onGet($from, $len) {
+
+    public function onGet($from, $len)
+    {
         $dateFrom = new \DateTime("+{$from} day");
         $this['periods'] = array_map(
-            function ($i) use($from) { 
+            function ($i) use ($from) {
                 $n = $from + $i;
-                return new \DateTime("+{$n} day"); 
+
+                return new \DateTime("+{$n} day");
             },
-            range(0, $len-1)
+            range(0, $len - 1)
         );
-        
+
         return $this;
     }
 }

@@ -4,11 +4,13 @@ namespace EmbedApp\Sample\Resource\App;
 
 use BEAR\Resource\ResourceObject;
 
-class Weekday extends ResourceObject {
-    public function onGet($year, $month, $day) {
+class Weekday extends ResourceObject
+{
+    public function onGet($year, $month, $day)
+    {
         $date = \DateTime::createFromFormat('Y-m-d', "$year-$month-$day");
-        $this['weekday'] = $date->format("D");
-        
+        $this['weekday'] = $date->format('D');
+
         return $this;
     }
 }
