@@ -20,7 +20,6 @@ class Period extends ResourceObject
 
     public function onGet($from, $len)
     {
-        $dateFrom = new \DateTime("+{$from} day");
         $values = array_map(
             function ($i) use ($from) {
                 $n = $from + $i;

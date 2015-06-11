@@ -4,7 +4,6 @@ namespace EmbedApp\Sample\Resource\App;
 
 use BEAR\Resource\FactoryInterface;
 use BEAR\Resource\ResourceObject;
-use Embed\Sample\ItemResourceGeneratorBuilder;
 
 class Period2 extends ResourceObject
 {
@@ -20,7 +19,6 @@ class Period2 extends ResourceObject
 
     public function onGet($from, $len)
     {
-        $dateFrom = new \DateTime("+{$from} day");
         $this['periods'] = array_map(
             function ($i) use ($from) {
                 $n = $from + $i;
