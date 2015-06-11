@@ -1,0 +1,21 @@
+{
+    "name": "myvendor/weekday",
+    "description":"n/a",
+    "license": "proprietary",
+    "require": {
+        "bear/package": "~1.0",
+        "bear/aura-router-module": "~1.0",
+        "monolog/monolog": "~1.0",
+        "ritalin/omelet-bear-module": "~0.2",
+        "ritalin/embed-resource-support": "~0.1"
+    },
+    "require-dev": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "EmbedApp\\Sample\\": "src/"
+        }
+    }
+}
