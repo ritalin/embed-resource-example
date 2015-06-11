@@ -5,6 +5,7 @@
 ## Usage
     $ git clone https://github.com/ritalin/embed-resource-support.git {Vendor.Package}
     $ cd {Vendor.Package}
+    $ mv composer.dist.json composer.json
     $ composer install
 
     // console
