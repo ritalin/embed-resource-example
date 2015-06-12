@@ -3,19 +3,21 @@
 namespace EmbedApp\Sample\Infra;
 
 use Omelet\Annotation\Dao;
-use Omelet\Annotation\Select;
 use Omelet\Annotation\ParamAlt;
+use Omelet\Annotation\Select;
 
 /**
  * @Dao("/")
  */
-interface TodoDao {
+interface TodoDao
+{
     /**
      * @Select
-     * 
-     * @param DateTime from
-     * @param DateTime to
+     *
+     * @param \DateTime $from
+     * @param \DateTime $to
+     *
      * @return Todo[]
      */
-    function listByPub(\DateTime $from, \DateTime $to);
+    public function listByPub(\DateTime $from, \DateTime $to);
 }
